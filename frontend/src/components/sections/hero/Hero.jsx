@@ -50,7 +50,7 @@ const people = [
 
 const Hero = () => {
   return (
-    <div className="relative h-svh overflow-hidden">
+    <div id="home" className="relative h-svh overflow-hidden">
       {/* Gradient overlay container */}
       <div className="absolute inset-0 z-0">
         {/* Spline iframe */}

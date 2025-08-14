@@ -35,7 +35,7 @@ const questions = [
 
 const Questions = () => {
   return (
-    <div className="max-w-4xl mx-auto py-16 px-2 sm:px-6 lg:px-8">
+    <div id="faq" className="max-w-4xl mx-auto py-16 px-2 sm:px-6 lg:px-8">
       <div className="text-center flex flex-col gap-4 mb-12">
         <h3 className={cn("font text-4xl font-medium")}>
           Frequently Asked{" "}

@@ -28,7 +28,7 @@ const NavBar = () => {
       <div
         style={{
           opacity: scrollProgress,
-          transition: "opacity 0.15s ease-out", // shorter duration
+          transition: "opacity 0.15s ease-out",
         }}
         className="absolute inset-0 flex justify-center"
       >
@@ -52,7 +52,7 @@ const NavBar = () => {
       <div
         style={{
           opacity: 1 - scrollProgress,
-          transition: "opacity 0.15s ease-out", 
+          transition: "opacity 0.15s ease-out",
         }}
         className="absolute inset-0 flex justify-center"
       >
@@ -60,7 +60,7 @@ const NavBar = () => {
           style={{
             width: `${dynamicWidth}px`,
             maxWidth: "calc(100% - 20px)",
-            height: dynamicHeight, 
+            height: dynamicHeight,
           }}
           className="rounded-lg flex items-center px-2"
         >
@@ -92,7 +92,7 @@ const NavContent = () => (
           Services
         </a>
       </li>
-      <li>
+      <li className="hidden sm:block">
         <a href="#faq" className="hover:text-primary transition-colors">
           FAQ
         </a>

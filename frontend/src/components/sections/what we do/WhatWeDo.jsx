@@ -73,7 +73,7 @@ const WhatWeDo = () => {
   }, [currentIndex]);
 
   return (
-    <section className="py-20 px-2 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 px-2 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center flex flex-col items-center mb-16">
           <h3 className={cn("text-4xl md:text-5xl font-medium mb-4")}>
@@ -90,10 +90,17 @@ const WhatWeDo = () => {
         </div>
 
         <SpotlightCard
-          className="max-w-screen-xl p-4 md:p-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 bg-zinc-900/70"
+          className="relative max-w-screen-xl p-4 md:p-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 bg-zinc-900/70"
           //   spotlightColor="rgba(163, 101, 255, 0.3)"
           spotlightColor="rgba(22, 163, 74, 0.5)"
         >
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `radial-gradient(circle at 0% 0%, rgba(22, 163, 74, 0.3) 0%, transparent 70%)`,
+            }}
+          />
+
           {/* Left side - Content */}
           <div className="flex flex-col justify-center">
             <h3 className="text-3xl md:text-4xl font-medium mb-6">
@@ -199,12 +206,3 @@ const WhatWeDo = () => {
 };
 
 export default WhatWeDo;
-
-
-
-// // in smalle device
-// []-------- single line
-// ---------- single line 
-// the para will be in second column and image and the title will be in the first
-
-// [] ========= both line 

@@ -21,7 +21,7 @@ import { Input } from "@/components/ui/input";
 
 const ApointUs = () => {
   return (
-    <section className="py-20 px-2 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 px-2 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center flex flex-col items-center mb-16">
           <h3 className={cn("text-4xl md:text-5xl font-medium mb-4")}>
@@ -40,9 +40,16 @@ const ApointUs = () => {
         </div>
 
         <SpotlightCard
-          className="max-w-screen-xl p-4 md:p-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 bg-zinc-900/70"
+          className="relative max-w-screen-xl p-4 md:p-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 bg-zinc-900/70"
           spotlightColor="rgba(163, 101, 255, 0.3)"
         >
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `radial-gradient(circle at 0% 0%, rgba(163, 101, 255, 0.3) 0%, transparent 70%)`,
+            }}
+          />
+
           {/* Left side - Content */}
           <div className="flex flex-col justify-center lg:p-10">
             <h3 className="text-3xl md:text-4xl font-medium mb-6">
@@ -107,7 +114,7 @@ const ApointUs = () => {
                   <Input
                     type="text"
                     id="name"
-                    className="h-12 w-full bg-white/5 backdrop-blur-sm border-white/10 rounded-lg focus:ring-2 focus:ring-[#a365ff]"
+                    className="h-12 w-full bg-white/5 backdrop-blur-sm border-white/10 rounded-lg focus-visible:ring-1 focus-visible:ring-[#a365ff] focus-visible:ring-offset-1 focus-visible:ring-offset-transparent"
                     placeholder="Dr. John Smith"
                   />
                 </div>
@@ -120,7 +127,7 @@ const ApointUs = () => {
                     type="email"
                     id="email"
                     placeholder="john@yourclinic.com"
-                    className="h-12 w-full bg-white/5 backdrop-blur-sm border-white/10 rounded-lg focus:ring-2 focus:ring-[#a365ff]"
+                    className="h-12 w-full bg-white/5 backdrop-blur-sm border-white/10 rounded-lg focus-visible:ring-1 focus-visible:ring-[#a365ff] focus-visible:ring-offset-1 focus-visible:ring-offset-transparent"
                   />
                 </div>
 
@@ -136,7 +143,9 @@ const ApointUs = () => {
                       <SelectValue placeholder="Select your practice size" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1e1b20] border border-white/10 text-white">
-                      <SelectItem className="p-2.5 px-4" value="solo">Solo Practitioner</SelectItem>
+                      <SelectItem className="p-2.5 px-4" value="solo">
+                        Solo Practitioner
+                      </SelectItem>
                       <SelectItem className="p-2.5 px-4" value="small">
                         Small Practice (2-5 providers)
                       </SelectItem>
