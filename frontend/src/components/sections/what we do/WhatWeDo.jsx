@@ -73,7 +73,7 @@ const WhatWeDo = () => {
   }, [currentIndex]);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-2 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center flex flex-col items-center mb-16">
           <h3 className={cn("text-4xl md:text-5xl font-medium mb-4")}>
@@ -90,12 +90,12 @@ const WhatWeDo = () => {
         </div>
 
         <SpotlightCard
-          className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 bg-zinc-900/70"
+          className="max-w-screen-xl p-4 md:p-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 bg-zinc-900/70"
           //   spotlightColor="rgba(163, 101, 255, 0.3)"
           spotlightColor="rgba(22, 163, 74, 0.5)"
         >
           {/* Left side - Content */}
-          <div className="flex flex-col justify-center p-6 lg:p-10">
+          <div className="flex flex-col justify-center">
             <h3 className="text-3xl md:text-4xl font-medium mb-6">
               Empowering Healthcare Professionals
             </h3>
@@ -121,8 +121,8 @@ const WhatWeDo = () => {
           </div>
 
           {/* Right side - Animated cards */}
-          <div className="relative min-h-[400px] w-full overflow-hidden rounded-xl">
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 p-6">
+          <div className="relative min-h-[400px] w-full overflow-hidden">
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
               <AnimatePresence mode="popLayout">
                 {visibleServices.map((service, index) => (
                   <motion.div
@@ -160,7 +160,7 @@ const WhatWeDo = () => {
                       index === 0 ? "z-30" : "z-20 opacity-90"
                     )}
                   >
-                    <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:border-[#a365ff]/30 transition-all">
+                    <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:border-green-200/30 transition-all">
                       <CardHeader className="flex flex-row items-start gap-4 pb-4">
                         <div className="aspect-square rounded-2xl flex items-center justify-center size-16">
                           <img

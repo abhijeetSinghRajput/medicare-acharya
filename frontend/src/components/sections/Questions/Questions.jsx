@@ -35,7 +35,7 @@ const questions = [
 
 const Questions = () => {
   return (
-    <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl mx-auto py-16 px-2 sm:px-6 lg:px-8">
       <div className="text-center flex flex-col gap-4 mb-12">
         <h3 className={cn("font text-4xl font-medium")}>
           Frequently Asked{" "}
@@ -52,7 +52,7 @@ const Questions = () => {
         {questions.map((item, index) => (
           <Card key={index} className="bg-white/5 backdrop-blur-lg border-white/10">
             <AccordionItem value={`item-${index}`} className="border-0">
-              <AccordionTrigger className="p-6 hover:no-underline [&[data-state=open]>svg]:rotate-180">
+              <AccordionTrigger className="p-4 md:p-6 hover:no-underline [&[data-state=open]>svg]:rotate-180">
                 <h4 className="text-lg font-medium text-white text-left">
                   {item.question}
                 </h4>

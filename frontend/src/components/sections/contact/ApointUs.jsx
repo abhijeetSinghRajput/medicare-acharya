@@ -7,10 +7,11 @@ import React from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import SpotlightCard from "@/components/SpotlightCard/SpotlightCard";
 import { CheckCircle } from "lucide-react";
+import { Label } from "@/components/ui/label";
 
 const ApointUs = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-2 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center flex flex-col items-center mb-16">
           <h3 className={cn("text-4xl md:text-5xl font-medium mb-4")}>
@@ -27,11 +28,11 @@ const ApointUs = () => {
         </div>
 
         <SpotlightCard
-          className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 bg-zinc-900/70"
+          className="max-w-screen-xl p-4 md:p-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 bg-zinc-900/70"
           spotlightColor="rgba(163, 101, 255, 0.3)"
         >
           {/* Left side - Content */}
-          <div className="flex flex-col justify-center p-6 lg:p-10">
+          <div className="flex flex-col justify-center lg:p-10">
             <h3 className="text-3xl md:text-4xl font-medium mb-6">
               Transforming Healthcare Management
             </h3>
@@ -65,7 +66,7 @@ const ApointUs = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative p-8 rounded-xl bg-gradient-to-br from-[#1e1b20] to-[#2a2438] border border-white/10"
+            className="relative p-4 md:p-8 rounded-xl bg-gradient-to-br from-[#1e1b20] to-[#2a2438] border border-white/10"
           >
             <div className="absolute inset-0 rounded-xl bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#a365ff]/10 via-transparent to-transparent opacity-70"></div>
             
@@ -73,10 +74,10 @@ const ApointUs = () => {
               <h4 className="text-2xl font-semibold mb-6 text-white">Schedule a Consultation</h4>
               
               <form className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-2">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-muted-foreground">
                     Your Name
-                  </label>
+                  </Label>
                   <input
                     type="text"
                     id="name"
@@ -85,10 +86,10 @@ const ApointUs = () => {
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-muted-foreground">
                     Email Address
-                  </label>
+                  </Label>
                   <input
                     type="email"
                     id="email"
@@ -97,10 +98,10 @@ const ApointUs = () => {
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="practice" className="block text-sm font-medium text-muted-foreground mb-2">
+                <div className="space-y-2">
+                  <Label htmlFor="practice" className="text-muted-foreground">
                     Practice Size
-                  </label>
+                  </Label>
                   <select
                     id="practice"
                     className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:ring-2 focus:ring-[#a365ff] focus:border-transparent text-white"
