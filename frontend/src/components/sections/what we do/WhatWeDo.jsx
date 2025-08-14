@@ -106,16 +106,25 @@ const WhatWeDo = () => {
             </p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
-                <CheckCircle className="text-green-500 size-5"/>
-                <span className="text-primary/70"><strong className="text-primary">Reduce</strong> administrative workload by 60%</span>
+                <CheckCircle className="text-green-500 size-5" />
+                <span className="text-primary/70">
+                  <strong className="text-primary">Reduce</strong>{" "}
+                  administrative workload by 60%
+                </span>
               </li>
               <li className="flex items-center gap-3">
-                <CheckCircle className="text-green-500 size-5"/>
-                <span className="text-primary/70">HIPAA-compliant <strong className="text-primary">secure</strong> platform</span>
+                <CheckCircle className="text-green-500 size-5" />
+                <span className="text-primary/70">
+                  HIPAA-compliant{" "}
+                  <strong className="text-primary">secure</strong> platform
+                </span>
               </li>
               <li className="flex items-center gap-3">
-                <CheckCircle className="text-green-500 size-5"/>
-                <span className="text-primary/70"><strong className="text-primary">24/7</strong> dedicated support team</span>
+                <CheckCircle className="text-green-500 size-5" />
+                <span className="text-primary/70">
+                  <strong className="text-primary">24/7</strong> dedicated
+                  support team
+                </span>
               </li>
             </ul>
           </div>
@@ -161,7 +170,7 @@ const WhatWeDo = () => {
                     )}
                   >
                     <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:border-green-200/30 transition-all">
-                      <CardHeader className="flex flex-row items-start gap-4 pb-4">
+                      <CardHeader className="icon-card grid p-4 md:p-6">
                         <div className="aspect-square rounded-2xl flex items-center justify-center size-16">
                           <img
                             src={service.icon}
@@ -169,14 +178,13 @@ const WhatWeDo = () => {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <div>
-                          <h4 className="text-xl font-semibold">
-                            {service.title}
-                          </h4>
-                          <p className="text-sm text-muted-foreground">
-                            {service.description}
-                          </p>
-                        </div>
+
+                        <h4 className="text-xl font-semibold">
+                          {service.title}
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          {service.description}
+                        </p>
                       </CardHeader>
                     </Card>
                   </motion.div>
@@ -191,3 +199,12 @@ const WhatWeDo = () => {
 };
 
 export default WhatWeDo;
+
+
+
+// // in smalle device
+// []-------- single line
+// ---------- single line 
+// the para will be in second column and image and the title will be in the first
+
+// [] ========= both line 

@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import SectionHeading from "@/components/SectionHeading";
 import ApointUs from "@/components/sections/contact/ApointUs";
 import Hero from "@/components/sections/hero/Hero";
@@ -10,8 +11,9 @@ import React from "react";
 const Homepage = () => {
   return (
     <div>
+      <NavBar/>
       <Hero />
-      <div className="space-y-10">
+      <div className="space-y-4 md:space-y-10">
         <WhatWeDo />
         <ApointUs />
         <Testimonials />

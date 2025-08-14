@@ -46,7 +46,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <div>
-      <div className="text-center flex flex-col gap-2 max-w-lg mx-auto relative z-50">
+      <div className="text-center flex flex-col gap-2 max-w-lg mx-auto relative z-10">
         <h3 className={cn("font text-4xl font-medium")}>
           What Our{" "}
           <Highlighter action="underline" color="#fff" strokeWidth={2}>
