@@ -1,16 +1,11 @@
 import { Highlighter } from "@/components/magicui/highlighter";
 import ShinyText from "@/components/ShinyText/ShinyText";
-import { cn } from "@/lib/utils";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn, nameToSlug } from "@/lib/utils";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { useNavigate } from "react-router-dom";
 
 const doctors = [
   {
@@ -71,39 +66,46 @@ const OurProfessionals = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {doctors.map((doctor, index) => (
             <ProfileCard doctor={doctor} />
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <Button
             variant="ghost"
             className="border border-white/20 hover:bg-[#a365ff]/10 hover:border-[#a365ff]/30 rounded-full px-8"
           >
             Meet All Specialists
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
 };
 
 const ProfileCard = ({ doctor }) => {
+  const navigate = useNavigate();
+
   return (
-    <Card className="rounded-2xl flex flex-col sm:flex-row p-6 gap-6 bg-muted/30">
-      <div className="rounded-xl overflow-hidden borde">
+    <Card className="rounded-2xl flex items-start flex-col sm:flex-row p-4 sm:p-6 gap-6 bg-muted/30">
+      <div className="rounded-xl  w-full sm:max-w-72 overflow-hidden border relative aspect-square">
         <img
-          className="w-full h-full object-contain"
+          className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover z-0"
+          src="./gradient-bg.png"
+          alt="background"
+        />
+        <img
+          className="relative z-10 object-cover w-full h-full"
           src={doctor.avatar}
           alt="doctor"
         />
       </div>
-      <div className="flex-1 space-y-6">
+      <div className="space-y-6 w-full">
         <div className="space-y-4">
           <div className="space-y-1 ">
-            <h3 className="font-medium text-lg">Dr Vivek Sriwastava</h3>
+            <h3 className="font-medium text-lg">{doctor.name}</h3>
             <p>
               Specialized in{" "}
               <strong className="text-[#a365ff] font-medium">
@@ -112,23 +114,23 @@ const ProfileCard = ({ doctor }) => {
             </p>
           </div>
 
-          <div className="flex gap-1 ">
+          <div className="flex gap-1 whitespace-nowrap flex-wrap">
             <Badge variant={"outline"}>UI/UX</Badge>
             <Badge variant={"outline"}>Product Design</Badge>
             <Badge variant={"outline"}>Copy writing</Badge>
           </div>
 
-          <p className="">{doctor.about}</p>
+          <p className="line-clamp-2">{doctor.about}</p>
           <Separator />
         </div>
 
-        <div className="flex gap-3">
-          <Button>More</Button>
+        <div className="grid grid-cols-3 gap-4">
+          <Button className="col-span-1 h-12">More</Button>
           <Button
-            type="submit"
-            className="w-full py-3 px-6 bg-gradient-to-r from-[#a365ff] to-[#7630ba] text-white font-medium rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-[#a365ff]/30"
+            onClick={() => navigate(nameToSlug(doctor.name))}
+            className="col-span-2 w-full h-12 py-3 px-6 bg-gradient-to-r from-[#a365ff] to-[#7630ba] text-white font-medium rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-[#a365ff]/30"
           >
-            Book an appointment
+            Book Appointment
           </Button>
         </div>
       </div>
