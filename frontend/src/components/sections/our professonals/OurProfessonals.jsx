@@ -9,19 +9,36 @@ import { useNavigate } from "react-router-dom";
 
 const doctors = [
   {
-    name: "Dr. Vivek Srivastava",
-    avatar: "/doctor.png",
+    name: "Dr. Kuldeep Malik",
+    avatar: "/doctors/kuldeep.png",
     about:
-      "Cardiologist with 15+ years experience in interventional procedures",
-    specialization: "Cardiology",
-    experience: "15 years",
+      "Orthopaedic specialist with 15+ years of experience in joint replacement and osteoarthritis care. Associate Director – Orthopaedics & Joint Replacement Surgery at Max Super Speciality Hospital, Shalimar Bagh.",
+    specialization: "Orthopaedics & Joint Replacement",
+    experience: "15+ years",
+    tags: [
+      "OsteoarthritisExpert",
+      "JointReplacementSurgeon",
+      "MaxHealthcare",
+      "OrthopaedicCare",
+      "PainReliefSpecialist",
+      "MaxExpert",
+    ],
   },
   {
-    name: "Dr. Priya Sharma",
-    avatar: "/doctor1.png",
-    about: "Pediatric specialist focused on preventive child healthcare",
-    specialization: "Pediatrics",
+    name: "Dr Jitesh Manghwani",
+    avatar: "/doctors/Dr-Jitesh-Manghwani-removebg-preview.png",
+    about:
+      "Orthopaedic Spine Surgeon at Max Hospital, Shalimar Bagh. Featured on Health 360 with Sneha Mordani.",
+    specialization: "Orthopaedic Spine Surgery",
     experience: "10 years",
+    tags: [
+      "SpineSurgeryExpert",
+      "OrthopaedicCare",
+      "MaxHospital",
+      "BackPainRelief",
+      "SurgicalSpecialist",
+      "BoneHealth",
+    ]
   },
   {
     name: "Dr. Arjun Patel",
@@ -29,6 +46,16 @@ const doctors = [
     about: "Orthopedic surgeon specializing in minimally invasive techniques",
     specialization: "Orthopedics",
     experience: "12 years",
+    tags: [
+      "MinimallyInvasive",
+      "SportsInjuryExpert",
+      "ArthroscopySpecialist",
+      "BoneHealth",
+      "FractureCare",
+      "JointPainRelief",
+      "SpineSpecialist",
+      "OrthopedicSurgeon",
+    ],
   },
   {
     name: "Dr. Neha Gupta",
@@ -36,6 +63,17 @@ const doctors = [
     about: "Neurologist researching advanced treatments for Parkinson's",
     specialization: "Neurology",
     experience: "8 years",
+    tags: [
+      "ParkinsonsExpert",
+      "BrainHealth",
+      "NeurologyCare",
+      "MigraineSpecialist",
+      "StrokePrevention",
+      "EpilepsyCare",
+      "NeuroResearch",
+      "MemoryDisorders",
+      "NerveHealth",
+    ],
   },
   {
     name: "Dr. Sanjay Mehta",
@@ -43,6 +81,17 @@ const doctors = [
     about: "Oncologist with expertise in precision cancer therapies",
     specialization: "Oncology",
     experience: "14 years",
+    tags: [
+      "CancerCare",
+      "PrecisionOncology",
+      "ChemotherapyExpert",
+      "TumorSpecialist",
+      "CancerResearch",
+      "Immunotherapy",
+      "RadiationTherapy",
+      "HopeForCancer",
+      "SurvivorCare",
+    ],
   },
 ];
 
@@ -53,7 +102,7 @@ const OurProfessionals = () => {
         <div className="text-center flex flex-col items-center mb-16">
           <h3 className={cn("text-4xl md:text-5xl font-medium mb-4")}>
             Meet Our{" "}
-            <Highlighter action="underline" color="#fff" strokeWidth={2}>
+            <Highlighter action="underline" color="fff" strokeWidth={2}>
               <strong className="text-[#a365ff] font-medium">Trusted</strong>
             </Highlighter>{" "}
             Professionals
@@ -115,9 +164,9 @@ const ProfileCard = ({ doctor }) => {
           </div>
 
           <div className="flex gap-1 whitespace-nowrap flex-wrap">
-            <Badge variant={"outline"}>UI/UX</Badge>
-            <Badge variant={"outline"}>Product Design</Badge>
-            <Badge variant={"outline"}>Copy writing</Badge>
+            {doctor.tags.map((tag) => (
+              <Badge variant={"outline"}>{tag}</Badge>
+            ))}
           </div>
 
           <p className="line-clamp-2">{doctor.about}</p>
@@ -127,7 +176,7 @@ const ProfileCard = ({ doctor }) => {
         <div className="grid grid-cols-3 gap-4">
           <Button className="col-span-1 h-12">More</Button>
           <Button
-            onClick={() => navigate(nameToSlug(doctor.name))}
+            // onClick={() => navigate(nameToSlug(doctor.name))}
             className="col-span-2 w-full h-12 py-3 px-6 bg-gradient-to-r from-[#a365ff] to-[#7630ba] text-white font-medium rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-[#a365ff]/30"
           >
             Book Appointment
