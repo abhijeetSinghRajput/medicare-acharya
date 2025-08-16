@@ -26,7 +26,7 @@ const doctors = [
   },
   {
     name: "Dr Jitesh Manghwani",
-    avatar: "/doctors/Dr-Jitesh-Manghwani-removebg-preview.png",
+    avatar: "https://res.cloudinary.com/dhtxrpqna/image/upload/1000096908-removebg-preview_ekqngw.png",
     about:
       "Orthopaedic Spine Surgeon at Max Hospital, Shalimar Bagh. Featured on Health 360 with Sneha Mordani.",
     specialization: "Orthopaedic Spine Surgery",
