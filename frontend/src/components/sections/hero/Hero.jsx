@@ -2,6 +2,7 @@ import Particles from "@/components/Particles/Particles";
 import ShinyText from "@/components/ShinyText/ShinyText";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { Button } from "@/components/ui/button";
+import { UpcomingPodcast } from "@/components/UpcomingPodcast";
 
 const people = [
   {
@@ -47,6 +48,10 @@ const people = [
       "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
   },
 ];
+
+const nextPodcastDate = new Date();
+nextPodcastDate.setDate(nextPodcastDate.getDate() + 3); // 3 days from now
+nextPodcastDate.setHours(14, 30); // 2:30 PM
 
 const Hero = () => {
   return (
@@ -98,7 +103,13 @@ const Hero = () => {
             }
             speed={3}
           />
-          <Button className="rounded-xl">See our work</Button>
+          {/* <Button className="rounded-xl">See our work</Button> */}
+          <UpcomingPodcast
+            guestName="Jane Doe"
+            date={nextPodcastDate}
+            description="Join us for a conversation about the future of web development"
+            className="mx-auto"
+          />
           <div className="space-y-2">
             <h3 className="medium text-base">Our Stackholders</h3>
             <div className="flex flex-row items-center justify-center mb-10 w-full">
