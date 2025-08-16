@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const doctors = [
   {
     name: "Dr. Rajender Kumar",
-    avatar: "/doctors/rajender.png",
+    avatar: "https://res.cloudinary.com/dhtxrpqna/image/upload/1000096945-removebg-preview_pqnqvq.png",
     about:
       "Renowned Radiation Oncologist with over 25 years of experience treating prostate, breast, lung, and brain cancers. Known for pioneering advanced therapies across North Delhi.",
     specialization: "Radiation Oncology",
