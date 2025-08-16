@@ -58,7 +58,7 @@ const doctors = [
     ],
   },
   {
-    name: "Dr. Neha Gupta",
+    name: "Dr. Clara Whitmore",
     avatar: "/doctor3.png",
     about: "Neurologist researching advanced treatments for Parkinson's",
     specialization: "Neurology",

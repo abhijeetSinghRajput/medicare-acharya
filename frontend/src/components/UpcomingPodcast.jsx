@@ -13,6 +13,13 @@ export function UpcomingPodcast({ guestName, date, className }) {
   );
   const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
 
+  // Format the exact time
+  const exactTime = date.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -28,19 +35,24 @@ export function UpcomingPodcast({ guestName, date, className }) {
       </div>
 
       <div>
-        <p className="text-sm font-medium truncate">Podcast with {guestName}</p>
+        <p className="text-sm font-medium truncate">
+          Podcast with {" "} 
+          <span className="text-[#a365ff]">
+          {guestName}
+          </span>
+        </p>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
           <ClockIcon className="w-3 h-3" />
           <span>
             {days > 0 ? `${days}d ` : ""}
-            {Math.floor(hours)}h {minutes}m
+            {Math.floor(hours)}h {minutes}m • {exactTime}
           </span>
         </div>
       </div>
 
       <motion.div
         whileHover={{ scale: 1.05 }}
-        className="px-3 py-1 text-[#a365ff] text-xs font-medium rounded-full bg-violet-900/20"
+        className="px-3 py-1 text-[#81ff65] text-xs font-medium rounded-full bg-green-900/20"
       >
         Live soon
       </motion.div>

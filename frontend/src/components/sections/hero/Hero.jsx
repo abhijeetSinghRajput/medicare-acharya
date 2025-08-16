@@ -50,8 +50,9 @@ const people = [
 ];
 
 const nextPodcastDate = new Date();
-nextPodcastDate.setDate(nextPodcastDate.getDate() + 3); // 3 days from now
-nextPodcastDate.setHours(14, 30); // 2:30 PM
+nextPodcastDate.setDate(nextPodcastDate.getDate() + 1); 
+nextPodcastDate.setHours(19, 30); 
+
 
 const Hero = () => {
   return (
@@ -105,7 +106,7 @@ const Hero = () => {
           />
           {/* <Button className="rounded-xl">See our work</Button> */}
           <UpcomingPodcast
-            guestName="Jane Doe"
+            guestName="Dr Jitesh Manghwani"
             date={nextPodcastDate}
             description="Join us for a conversation about the future of web development"
             className="mx-auto"
