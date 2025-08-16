@@ -9,19 +9,19 @@ import { useNavigate } from "react-router-dom";
 
 const doctors = [
   {
-    name: "Dr. Kuldeep Malik",
-    avatar: "/doctors/kuldeep.png",
+    name: "Dr. Rajender Kumar",
+    avatar: "/doctors/rajender.png",
     about:
-      "Orthopaedic specialist with 15+ years of experience in joint replacement and osteoarthritis care. Associate Director – Orthopaedics & Joint Replacement Surgery at Max Super Speciality Hospital, Shalimar Bagh.",
-    specialization: "Orthopaedics & Joint Replacement",
-    experience: "15+ years",
+      "Renowned Radiation Oncologist with over 25 years of experience treating prostate, breast, lung, and brain cancers. Known for pioneering advanced therapies across North Delhi.",
+    specialization: "Radiation Oncology",
+    experience: "25+ years",
     tags: [
-      "OsteoarthritisExpert",
-      "JointReplacementSurgeon",
-      "MaxHealthcare",
-      "OrthopaedicCare",
-      "PainReliefSpecialist",
-      "MaxExpert",
+      "RadiationOncology",
+      "CancerSpecialist",
+      "ProstateCancerCare",
+      "BreastCancerTreatment",
+      "LungCancerTherapy",
+      "BrainTumorExpert",
     ],
   },
   {
@@ -38,7 +38,7 @@ const doctors = [
       "BackPainRelief",
       "SurgicalSpecialist",
       "BoneHealth",
-    ]
+    ],
   },
   {
     name: "Dr. Arjun Patel",

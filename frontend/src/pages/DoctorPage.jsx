@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const doctor = {
   name: "Dr. Kuldeep Malik",
-  avatar: "/doctors/kuldeep.png",
+  avatar: "/doctors/rajender.png",
   about:
     "Orthopaedic specialist with 15+ years of experience in joint replacement and osteoarthritis care. Associate Director – Orthopaedics & Joint Replacement Surgery at Max Super Speciality Hospital, Shalimar Bagh.",
   specialization: "Orthopaedics & Joint Replacement",

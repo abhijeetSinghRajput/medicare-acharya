@@ -15,9 +15,9 @@ const Homepage = () => {
       <Hero />
       <div className="space-y-4 md:space-y-10">
         <WhatWeDo />
+        <OurProfessonals />
         <ApointUs />
         <Testimonials />
-        <OurProfessonals />
         <Questions />
       </div>
     </div>
