@@ -1,11 +1,13 @@
 import { Highlighter } from "@/components/magicui/highlighter";
 import ShinyText from "@/components/ShinyText/ShinyText";
+import { Badge } from "@/components/ui/badge";
+import { Stethoscope } from "lucide-react";
 import React from "react";
 import { useParams } from "react-router-dom";
 
 const doctor = {
   name: "Dr. Kuldeep Malik",
-  avatar: "/doctors/rajender.png",
+  avatar: "./doctors/rajender.jpg",
   about:
     "Orthopaedic specialist with 15+ years of experience in joint replacement and osteoarthritis care. Associate Director – Orthopaedics & Joint Replacement Surgery at Max Super Speciality Hospital, Shalimar Bagh.",
   specialization: "Orthopaedics & Joint Replacement",
@@ -48,20 +50,20 @@ const DoctorPage = () => {
         <div className="relative w-full max-w-md sm:w-1/2">
           <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-2xl">
             <img
-              src="./doctors/kuldeep.jpg"
+              src={doctor.avatar}
               alt={doctor.name}
               className="aspect-[3/4] h-full w-full object-cover transition-all duration-500 hover:scale-105"
             />
-            {/* Experience Badge */}
-            <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-purple-900 backdrop-blur-sm">
-              {doctor.experience} experience
-            </div>
           </div>
         </div>
 
         {/* Doctor Info */}
         <div className="w-full space-y-6 sm:w-1/2">
-          <h3 className="text-lg font-semibold text-purple-600 md:text-xl">
+          <Badge className="w-max gap-2 cursor-pointer relative z-10 hover:bg-black/90 border border-transparent text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset] flex space-x-2 items-center bg-amber-400/10 border-none text-amber-400">
+            <Stethoscope className="size-5"/>
+            {doctor.experience} experience
+          </Badge>
+          <h3 className="text-lg font-semibold md:text-xl">
             Meet {doctor.name}
           </h3>
           <h1 className="text-balance text-4xl font-bold md:text-5xl lg:text-6xl">
@@ -70,23 +72,11 @@ const DoctorPage = () => {
               {doctor.specialization}
             </span>
           </h1>
-          
+
           <div className="max-w-lg">
             <ShinyText text={doctor.about} />
           </div>
-          
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 pt-4">
-            {doctor.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-800"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-          
+
           {/* CTA Button */}
           <button className="mt-8 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
             Book Consultation

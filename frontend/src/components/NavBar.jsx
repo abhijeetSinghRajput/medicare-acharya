@@ -74,7 +74,7 @@ const NavBar = () => {
 const NavContent = () => (
   <div className="flex gap-2 justify-evenly items-center w-full h-full">
     <div className="size-12 flex-shrink-0">
-      <img src="./heart.svg" alt="logo" className="w-full h-full" />
+      <img src="./logo.png" alt="logo" className="w-full h-full" />
     </div>
     <ul className="flex gap-4 font-medium text-primary/80 flex-grow justify-center">
       <li>
