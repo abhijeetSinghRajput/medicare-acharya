@@ -49,9 +49,9 @@ const people = [
   },
 ];
 
-const nextPodcastDate = new Date();
-nextPodcastDate.setDate(nextPodcastDate.getDate() + 1); 
-nextPodcastDate.setHours(19, 30); 
+// const nextPodcastDate = new Date();
+// nextPodcastDate.setDate(nextPodcastDate.getDate() + 1); 
+// nextPodcastDate.setHours(19, 30); 
 
 
 const Hero = () => {
@@ -104,13 +104,13 @@ const Hero = () => {
             }
             speed={3}
           />
-          {/* <Button className="rounded-xl">See our work</Button> */}
-          <UpcomingPodcast
+          <Button className="rounded-xl">See our work</Button>
+          {/* <UpcomingPodcast
             guestName="Dr Jitesh Manghwani"
             date={nextPodcastDate}
             description="Join us for a conversation about the future of web development"
             className="mx-auto"
-          />
+          /> */}
           <div className="space-y-2">
             <h3 className="medium text-base">Our Stackholders</h3>
             <div className="flex flex-row items-center justify-center mb-10 w-full">

@@ -66,20 +66,19 @@
     @apply bg-background text-foreground;
   }
 
-  .icon-card{
+  .icon-card {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
     grid-column-gap: 8px;
   }
 
-  .icon-card div:has(img){
+  .icon-card div:has(img) {
     width: 42px;
     height: 42px;
   }
 
-  .icon-card p{
+  .icon-card p {
     grid-column: 1/-1;
   }
 }
-

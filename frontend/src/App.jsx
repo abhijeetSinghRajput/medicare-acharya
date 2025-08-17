@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import DoctorPage from "./pages/DoctorPage";
+import DoctorPage from "./pages/doctor/DoctorPage";
 
 const App = () => {
   return (
