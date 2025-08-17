@@ -176,7 +176,7 @@ const ProfileCard = ({ doctor }) => {
         <div className="grid grid-cols-3 gap-4">
           <Button className="col-span-1 h-12">More</Button>
           <Button
-            // onClick={() => navigate(nameToSlug(doctor.name))}
+            onClick={() => navigate(nameToSlug(doctor.name))}
             className="col-span-2 w-full h-12 py-3 px-6 bg-gradient-to-r from-[#a365ff] to-[#7630ba] text-white font-medium rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-[#a365ff]/30"
           >
             Book Appointment
