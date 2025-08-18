@@ -6,12 +6,12 @@ import { useState } from "react";
 const NavBar = () => {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "About",
+      link: "#about",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "Team",
+      link: "#team",
     },
     {
       name: "Contact",
@@ -25,13 +25,8 @@ const NavBar = () => {
     <div className="w-full sticky top-0 z-50 ">
       <Navbar>
         {/* Desktop Navigation */}
-        <NavBody>
-          <NavbarLogo />
+        <NavBody className={"min-h-14"}>
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
-          </div>
         </NavBody>
  
         {/* Mobile Navigation */}
@@ -58,22 +53,6 @@ const NavBar = () => {
                 <span className="block">{item.name}</span>
               </a>
             ))}
-            <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
-            </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>

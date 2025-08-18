@@ -5,7 +5,7 @@ import DoctorTeam from './DoctorTeam'
 import DoctorContact from './DoctorContact'
 import DoctorGallery from './DoctorGallery'
 import DoctorTestimonials from './DoctorTestimonials'
-import NavBar from './Navbar'
+import NavBar from './NavBar'
 
 const DoctorPage = () => {
   return (

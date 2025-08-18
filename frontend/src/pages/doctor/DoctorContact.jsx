@@ -24,7 +24,7 @@ const socialIcons = {
 };
 
 const doctor = {
-  name: "Dr. Kuldeep Malik",
+  name: "Dr. Rajender Kumar",
   avatar: "./doctors/rajender-2.jpg",
   socialLinks: [
     { label: "twitter", link: "" },
