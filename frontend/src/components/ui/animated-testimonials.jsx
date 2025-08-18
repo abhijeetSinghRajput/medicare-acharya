@@ -4,8 +4,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Button } from "./button";
+import { cn } from "@/lib/utils";
 
-export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
+export const AnimatedTestimonials = ({ testimonials, autoplay = false, className }) => {
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
 
@@ -27,7 +28,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
   }, [autoplay]);
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className={cn("mx-auto max-w-sm p-4 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12", className)}>
       <div className="relative grid grid-cols-1 gap-4 md:gap-20 md:grid-cols-2">
         {/* Image Carousel */}
         <div className="relative h-80 w-full overflow-hidden rounded-3xl">
@@ -76,7 +77,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
         </div>
 
         {/* Testimonial Content */}
-        <div className="flex flex-col justify-between py-4">
+        <div className="flex flex-col justify-between">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -106,7 +107,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                 {testimonials[active].designation}
               </p>
               <motion.p 
-                className="mt-8 text-lg text-gray-500 dark:text-neutral-300"
+                className="mt-6 text-lg text-gray-500 dark:text-neutral-300"
                 initial={{ opacity: 0 }}
                 animate={{ 
                   opacity: 1,

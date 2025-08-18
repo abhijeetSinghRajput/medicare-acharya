@@ -16,12 +16,8 @@ const doctors = [
     specialization: "Radiation Oncology",
     experience: "25+ years",
     tags: [
-      "RadiationOncology",
-      "CancerSpecialist",
-      "ProstateCancerCare",
-      "BreastCancerTreatment",
-      "LungCancerTherapy",
-      "BrainTumorExpert",
+      "Orthopedics",
+      "Join Replacement",
     ],
   },
   {
@@ -34,10 +30,7 @@ const doctors = [
     tags: [
       "SpineSurgeryExpert",
       "OrthopaedicCare",
-      "MaxHospital",
-      "BackPainRelief",
-      "SurgicalSpecialist",
-      "BoneHealth",
+      "Robotic surgery",
     ],
   },
   {
@@ -117,7 +110,7 @@ const OurProfessionals = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {doctors.map((doctor, index) => (
-            <ProfileCard doctor={doctor} />
+            <ProfileCard key={index} doctor={doctor} />
           ))}
         </div>
 
@@ -164,8 +157,8 @@ const ProfileCard = ({ doctor }) => {
           </div>
 
           <div className="flex gap-1 whitespace-nowrap flex-wrap">
-            {doctor.tags.map((tag) => (
-              <Badge variant={"outline"}>{tag}</Badge>
+            {doctor.tags.map((tag, index) => (
+              <Badge key={index} variant={"outline"}>{tag}</Badge>
             ))}
           </div>
 
