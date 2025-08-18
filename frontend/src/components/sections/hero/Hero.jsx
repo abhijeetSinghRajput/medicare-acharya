@@ -10,18 +10,8 @@ const people = [
     name: "Abhishek Bhattacharya",
     designation: "Co Founder",
     image: "./partners/abhishek-bhatacharya.jpg"
-  },
-  {
-    id: 2,
-    name: "Vivek Shrivastava",
-    designation: "Founder and CEO",
-    image:"./partners/vivek.jpg",
-  },
+  }
 ];
-
-// const nextPodcastDate = new Date();
-// nextPodcastDate.setDate(nextPodcastDate.getDate() + 1); 
-// nextPodcastDate.setHours(19, 30); 
 
 
 const Hero = () => {

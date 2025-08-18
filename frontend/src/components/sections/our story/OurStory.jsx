@@ -5,20 +5,21 @@ import ShinyText from "@/components/ShinyText/ShinyText";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { cn } from "@/lib/utils";
 
+const keywordsClass = "font-medium text-purple-400";
 const testimonials = [
   {
-    quote:
-      "With a career rooted in healthcare management at leading institutions like Fortis Hospital and Fortis Memorial Research Institute, I’ve witnessed how innovation can truly impact lives. Every role has strengthened my belief that technology and dedication together can reshape patient care for the better.",
+    quote: (
+      <p>
+        With a career rooted in healthcare management at leading institutions
+        like Fortis Hospital and Fortis Memorial Research Institute, I’ve
+        witnessed how innovation can truly impact lives. Every role has
+        strengthened my belief that technology and dedication together can
+        reshape patient care for the better.
+      </p>
+    ),
     name: "Abhishek Bhattacharya",
     designation: "Sr. Manager BD, Fortis Hospital Noida",
     src: "./partners/abhishek-bhatacharya.jpg",
-  },
-  {
-    quote:
-      "From an engineer with a B.Tech degree to a creator behind the lens and words, my journey blends technology with art. Photography, blogging, and content creation taught me to see the world differently—and that same vision drives me to build smarter, more human-centered solutions in healthcare.",
-    name: "Vivek Srivastava",
-    designation: "CEO at Medicare Acharya",
-    src: "./partners/vivek.jpg",
   },
 ];
 
@@ -43,7 +44,7 @@ const OurStory = () => {
       </div>
 
       <AnimatedTestimonials
-        className={"max-w-full"}
+        className={"md:max-w-5xl"}
         testimonials={testimonials}
       />
     </div>
