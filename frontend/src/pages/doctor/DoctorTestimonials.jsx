@@ -307,7 +307,7 @@ const testimonials = [
 
 const DoctorTestimonials = () => {
   return (
-    <div className="p-4 sm:p-8 mx-auto">
+    <section id="testimonials" className="p-4 sm:p-8 mx-auto">
       <div className="text-center flex flex-col items-center">
         <h3 className="text-4xl md:text-5xl max-w-2xl font-medium mb-4">
           What Our{" "}
@@ -331,7 +331,7 @@ const DoctorTestimonials = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

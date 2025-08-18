@@ -16,7 +16,7 @@ const DoctorTeam = () => {
   ];
 
   return (
-    <div className="">
+    <section id="team" className="">
       <div className="p-4 sm:p-8">
         <div className="text-center flex flex-col items-center mb-16">
           <h3 className="text-4xl md:text-5xl max-w-2xl font-medium mb-4">
@@ -40,7 +40,7 @@ const DoctorTeam = () => {
         showPagination={true}
         showNavigation={true}
       />
-    </div>
+    </section>
   );
 };
 

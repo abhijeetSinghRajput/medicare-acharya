@@ -27,7 +27,7 @@ const doctor = {
 const DoctorHero = () => {
   const { doctorId } = useParams();
   return (
-    <div className="relative">
+    <section id="home" className="relative">
       {/* Background Video */}
       <div className="absolute inset-0 -z-10 mix-blend-screen opacity-80 overflow-hidden">
         <div
@@ -97,7 +97,7 @@ const DoctorHero = () => {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 

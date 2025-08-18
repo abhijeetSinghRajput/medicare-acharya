@@ -37,7 +37,7 @@ const doctor = {
 
 const DoctorContact = () => {
   return (
-    <div className="p-4 sm:p-8 max-w-7xl mx-auto">
+    <section id="contact" className="p-4 sm:p-8 max-w-7xl mx-auto">
       <div className="text-center flex flex-col items-center mb-16">
         <h3 className="text-4xl md:text-5xl max-w-2xl font-medium mb-4">
           Exceptional Care From{" "}
@@ -136,7 +136,7 @@ const DoctorContact = () => {
           </CardFooter>
         </Card>
       </div>
-    </div>
+    </section>
   );
 };
 
