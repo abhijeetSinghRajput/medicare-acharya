@@ -5,26 +5,25 @@ import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
-import { SparklesIcon } from "lucide-react"
 import {
   Autoplay,
   EffectCoverflow,
   Navigation,
   Pagination,
 } from "swiper/modules"
+import { cn } from "@/lib/utils"
 
-import { Badge } from "@/components/ui/badge"
 
 export const CardCarousel = ({
   images,
   autoplayDelay = 1500,
   showPagination = true,
   showNavigation = true,
+  imageClassName,
 }) => {
   const css = `
   .swiper {
     width: 100%;
-    padding-bottom: 50px;
   }
   
   .swiper-slide {
@@ -54,7 +53,7 @@ export const CardCarousel = ({
       <div
         className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
         <div
-          className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5 p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
+          className="relative mx-auto flex w-full flex-col rounded-[24px] p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
 
           <div className="flex w-full items-center justify-center gap-4">
             <div className="w-full">
@@ -87,25 +86,23 @@ export const CardCarousel = ({
                 modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}>
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <div className="size-full rounded-3xl bg-gradient-to-b from-[#a7b4c8] via-[#bbc6d7] to-[#9996b9]">
+                    <div className={cn("aspect-square w-[300px] h-[300px] overflow-hidden rounded-3xl bg-gradient-to-b from-[#a7b4c8] via-[#bbc6d7] to-[#9996b9]", imageClassName)}>
                       <img
                         src={image.src}
-                        width={500}
-                        height={500}
-                        className="size-full rounded-xl"
-                        alt={image.alt} />
+                        alt={image.alt} 
+                        className="h-full w-full object-cover rounded-xl"
+                      />
                     </div>
                   </SwiperSlide>
                 ))}
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <div className="size-full rounded-3xl bg-gradient-to-b from-[#a7b4c8] via-[#bbc6d7] to-[#9996b9]">
+                    <div className={cn("aspect-square w-[300px] h-[300px] overflow-hidden rounded-3xl bg-gradient-to-b from-[#a7b4c8] via-[#bbc6d7] to-[#9996b9]", imageClassName)}>
                       <img
                         src={image.src}
-                        width={200}
-                        height={200}
-                        className="size-full rounded-xl"
-                        alt={image.alt} />
+                        alt={image.alt} 
+                        className="h-full w-full object-cover rounded-xl"
+                      />
                     </div>
                   </SwiperSlide>
                 ))}

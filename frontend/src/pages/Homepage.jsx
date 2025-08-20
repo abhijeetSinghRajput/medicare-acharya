@@ -1,3 +1,4 @@
+import Highlights from "@/components/Highlights";
 import NavBar from "@/components/NavBar";
 import SectionHeading from "@/components/SectionHeading";
 import ApointUs from "@/components/sections/contact/ApointUs";
@@ -16,6 +17,7 @@ const Homepage = () => {
       <Hero />
       <div className="space-y-4 md:space-y-10">
         <OurStory/>
+        <Highlights/>
         <WhatWeDo />
         <OurProfessonals />
         <ApointUs />

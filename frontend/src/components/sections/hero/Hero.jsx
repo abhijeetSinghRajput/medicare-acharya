@@ -1,18 +1,20 @@
+import CountDown from "@/components/CountDown";
 import Particles from "@/components/Particles/Particles";
 import ShinyText from "@/components/ShinyText/ShinyText";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { Button } from "@/components/ui/button";
-import { UpcomingPodcast } from "@/components/UpcomingPodcast";
+import { LinkPreview } from "@/components/ui/link-preview";
+import { RedirectLink } from "@/components/RedirectLink";
+import { ExternalLink, Link, LinkIcon } from "lucide-react";
 
 const people = [
   {
     id: 1,
     name: "Abhishek Bhattacharya",
     designation: "Co Founder",
-    image: "./partners/abhishek-bhatacharya.jpg"
-  }
+    image: "./partners/abhishek-bhatacharya.jpg",
+  },
 ];
-
 
 const Hero = () => {
   return (
@@ -54,7 +56,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
-        <div className="max-w-lg lg:max-w-xl space-y-6 px-4">
+        <div className="max-w-lg  lg:max-w-xl space-y-6 px-4">
           <h2 className="text-4xl font-medium md:text-5xl lg:text-6xl">
             Smart Tools for Smarter Healthcare
           </h2>
@@ -65,12 +67,20 @@ const Hero = () => {
             speed={3}
           />
           <Button className="rounded-xl">See our work</Button>
-          {/* <UpcomingPodcast
-            guestName="Dr Jitesh Manghwani"
-            date={nextPodcastDate}
+          <CountDown />
+          {/*
+          <p className="flex gap-2 items-center mx-auto border w-max">
+            <LinkPreview url="https://medicareacharya.netlify.app/" className="font-medium">
+              mrcodium
+            </LinkPreview>{" "}
+            <ExternalLink className="size-4"/>
+          </p> */}
+          <RedirectLink
+            title="Dr Jitesh Manghwani"
+            date={new Date()}
             description="Join us for a conversation about the future of web development"
             className="mx-auto"
-          /> */}
+          />
           <div className="space-y-2">
             <h3 className="medium text-base">Our Patners</h3>
             <div className="flex flex-row items-center justify-center mb-10 w-full">
