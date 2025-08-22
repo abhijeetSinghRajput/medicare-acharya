@@ -1,8 +1,7 @@
 import { Highlighter } from "@/components/magicui/highlighter";
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
 import React, { useState } from "react";
-import { 
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -13,23 +12,28 @@ import { Card } from "@/components/ui/card";
 const questions = [
   {
     question: "What is a doctor management platform?",
-    answer: "A doctor management platform is a digital solution that helps healthcare professionals manage appointments, patient records, billing, and communication—all in one place. It streamlines operations so doctors can focus more on patient care.",
+    answer:
+      "It's a digital solution that helps healthcare professionals manage appointments, patient records, billing, and communication—all in one place. Think of it as your smart assistant, so you can focus more on patient care.",
   },
   {
     question: "How can doctors benefit from using a management agency?",
-    answer: "Doctors save time, reduce administrative burden, and improve patient engagement. Agencies often provide tools for scheduling, telemedicine, analytics, and even marketing support to grow their practice.",
+    answer:
+      "Doctors save time, reduce paperwork, and stay connected with patients more easily. Agencies often provide scheduling tools, telemedicine support, analytics, and even marketing to grow your practice.",
   },
   {
     question: "Is it secure to manage patient data online?",
-    answer: "Yes—reputable platforms use encryption, secure servers, and comply with healthcare regulations like HIPAA or India's DISHA guidelines to protect sensitive patient information.",
+    answer:
+      "Yes—reputable platforms use encryption, secure servers, and comply with healthcare regulations like HIPAA or India's DISHA guidelines to protect sensitive data.",
   },
   {
     question: "Can I integrate my existing clinic software with this platform?",
-    answer: "Most modern platforms offer API integrations or custom onboarding to sync with your current systems, including EMRs, payment gateways, and CRM tools.",
+    answer:
+      "Absolutely. Most modern platforms offer API integrations or custom onboarding to sync with your current systems, including EMRs, payment gateways, and CRM tools.",
   },
   {
     question: "How do I get started with a doctor management agency?",
-    answer: "You can sign up online, book a demo, or schedule a consultation. The agency will guide you through setup, data migration, and training so your practice runs smoothly from day one.",
+    answer:
+      "Just sign up online, book a demo, or schedule a consultation. The agency will guide you through setup, data migration, and training so everything runs smoothly from day one.",
   },
 ];
 
@@ -50,7 +54,10 @@ const Questions = () => {
 
       <Accordion type="single" collapsible className="w-full space-y-4">
         {questions.map((item, index) => (
-          <Card key={index} className="bg-white/5 backdrop-blur-lg border-white/10">
+          <Card
+            key={index}
+            className="bg-white/5 backdrop-blur-lg border-white/10"
+          >
             <AccordionItem value={`item-${index}`} className="border-0">
               <AccordionTrigger className="p-4 md:p-6 hover:no-underline [&[data-state=open]>svg]:rotate-180">
                 <h4 className="text-lg font-medium text-white text-left">

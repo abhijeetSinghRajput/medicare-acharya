@@ -31,3 +31,4 @@ export function formatNumberWithSuffix(num) {
   }
   return { number: num, suffix: "" };
 }
+

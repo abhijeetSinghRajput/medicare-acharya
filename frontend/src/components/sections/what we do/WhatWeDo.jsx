@@ -12,44 +12,45 @@ const services = [
   {
     id: 1,
     color: "#a365ff",
-    icon: "./heart.svg",
-    title: "Practice Management",
+    icon: "./clock.svg",
+    title: "Skip the Queue",
     description:
-      "Comprehensive solutions for scheduling, billing, and patient records to streamline your clinic operations.",
+      "Priority booking system that puts online patients ahead of walk-ins at partner hospitals.",
   },
   {
     id: 2,
     color: "#00c9a7",
-    icon: "./phone.svg",
-    title: "Telemedicine Integration",
+    icon: "./plant.svg",
+    title: "Verified Doctors",
     description:
-      "Seamless virtual care platform that connects you with patients anywhere, anytime.",
+      "Only certified and trusted doctors from reputed hospitals are listed on our platform.",
   },
   {
     id: 3,
     color: "#1e86ff",
-    icon: "./team.svg",
-    title: "Analytics Dashboard",
+    icon: "./notification.svg",
+    title: "Live Status Tracking",
     description:
-      "Real-time insights into your practice performance and patient trends.",
+      "Track your appointment progress in real-time so you always know where you stand in the queue.",
   },
   {
     id: 4,
     color: "#f9a825",
-    icon: "./lock.svg",
-    title: "HIPAA Compliance",
+    icon: "./team.svg",
+    title: "Hospital Network Access",
     description:
-      "Secure patient data management that meets all healthcare regulations.",
+      "Leverage our strong connections with multiple hospitals for faster access to quality care.",
   },
   {
     id: 5,
-    color: "#00c9a7", // #ff6b6b
-    icon: "./plant.svg",
-    title: "Revenue Cycle Management",
+    color: "#ff6b6b",
+    icon: "./lock.svg",
+    title: "Safe & Transparent",
     description:
-      "Optimized billing and claims processing to maximize your reimbursements.",
+      "Seamless digital process with secure patient data handling and upfront clarity in services.",
   },
 ];
+
 
 const WhatWeDo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,16 +77,17 @@ const WhatWeDo = () => {
     <section id="services" className="py-20 px-2 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center flex flex-col items-center mb-16">
-          <h3 className={cn("text-4xl md:text-5xl font-medium mb-4")}>
+          <h3 className={cn("text-4xl md:text-5xl font-medium mb-2 p-2")}>
             What We{" "}
             <Highlighter action="underline" color="#fff" strokeWidth={2}>
-              <strong className="text-[#a365ff] font-medium">Do</strong>
+              <strong className="text-[#a365ff] font-medium">Provide</strong>
             </Highlighter>
           </h3>
 
           <p className="text-muted-foreground max-w-2xl">
-            Our comprehensive platform empowers healthcare providers with tools
-            to optimize practice management and enhance patient care delivery.
+            We help patients skip long queues, connect with verified doctors,
+            and get real-time updates on their appointments—making healthcare
+            faster, smoother, and more transparent.
           </p>
         </div>
 
@@ -182,7 +184,7 @@ const WhatWeDo = () => {
                           <img
                             src={service.icon}
                             alt={service.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover scale-150"
                           />
                         </div>
 

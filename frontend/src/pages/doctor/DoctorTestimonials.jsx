@@ -312,7 +312,7 @@ const DoctorTestimonials = () => {
         <h3 className="text-4xl md:text-5xl max-w-2xl font-medium mb-4">
           What Our{" "}
           <Highlighter action="underline" color="#fff" strokeWidth={2}>
-            <strong className="font-medium text-[#a365ff]">Clients</strong>
+            <strong className="font-medium text-[#a365ff]">Patients</strong>
           </Highlighter>{" "}
           say?
         </h3>

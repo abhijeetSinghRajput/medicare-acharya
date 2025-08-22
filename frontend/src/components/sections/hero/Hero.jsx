@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { RedirectLink } from "@/components/RedirectLink";
 import { ExternalLink, Link, LinkIcon } from "lucide-react";
+import DoctorList from "@/components/DoctorList";
 
 const people = [
   {
@@ -62,25 +63,13 @@ const Hero = () => {
           </h2>
           <ShinyText
             text={
-              "We build innovative digital solutions to make healthcare more efficient, accessible, and patient-focused"
+              "Book online, get ahead of the queue, and meet trusted doctors across leading hospitals—without the long wait."
             }
             speed={3}
           />
-          <Button className="rounded-xl">See our work</Button>
-          <CountDown />
-          {/*
-          <p className="flex gap-2 items-center mx-auto border w-max">
-            <LinkPreview url="https://medicareacharya.netlify.app/" className="font-medium">
-              mrcodium
-            </LinkPreview>{" "}
-            <ExternalLink className="size-4"/>
-          </p> */}
-          <RedirectLink
-            title="Dr Jitesh Manghwani"
-            date={new Date()}
-            description="Join us for a conversation about the future of web development"
-            className="mx-auto"
-          />
+          {/* <CountDown /> */}
+          <RedirectLink text={"Get Started"} link={"#contact"}/>
+
           <div className="space-y-2">
             <h3 className="medium text-base">Our Patners</h3>
             <div className="flex flex-row items-center justify-center mb-10 w-full">

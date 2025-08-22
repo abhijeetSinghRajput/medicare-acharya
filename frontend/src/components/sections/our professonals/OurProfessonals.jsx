@@ -28,8 +28,8 @@ const doctors = [
     specialization: "Orthopaedic Spine Surgery",
     experience: "10 years",
     tags: [
-      "SpineSurgeryExpert",
-      "OrthopaedicCare",
+      "Spine Surgery Expert",
+      "Orthopaedic Care",
       "Robotic surgery",
     ],
   },
@@ -40,14 +40,14 @@ const doctors = [
     specialization: "Orthopedics",
     experience: "12 years",
     tags: [
-      "MinimallyInvasive",
-      "SportsInjuryExpert",
-      "ArthroscopySpecialist",
-      "BoneHealth",
+      "Minimally Invasive",
+      "Sports Injury Expert",
+      "Arthroscopy Specialist",
+      "Bone Health",
       "FractureCare",
-      "JointPainRelief",
-      "SpineSpecialist",
-      "OrthopedicSurgeon",
+      "Joint Pain Relief",
+      "Spine Specialist",
+      "Orthopedic Surgeon",
     ],
   },
   {
@@ -57,15 +57,15 @@ const doctors = [
     specialization: "Neurology",
     experience: "8 years",
     tags: [
-      "ParkinsonsExpert",
+      "Parkinsons Expert",
       "BrainHealth",
-      "NeurologyCare",
-      "MigraineSpecialist",
-      "StrokePrevention",
+      "Neurology Care",
+      "Migraine Specialist",
+      "Stroke Prevention",
       "EpilepsyCare",
-      "NeuroResearch",
-      "MemoryDisorders",
-      "NerveHealth",
+      "Neuro Research",
+      "Memory Disorders",
+      "Nerve Health",
     ],
   },
   {
@@ -76,14 +76,14 @@ const doctors = [
     experience: "14 years",
     tags: [
       "CancerCare",
-      "PrecisionOncology",
-      "ChemotherapyExpert",
-      "TumorSpecialist",
-      "CancerResearch",
+      "Precision Oncology",
+      "Chemotherapy Expert",
+      "Tumor Specialist",
+      "Cancer Research",
       "Immunotherapy",
-      "RadiationTherapy",
-      "HopeForCancer",
-      "SurvivorCare",
+      "Radiation Therapy",
+      "HopeFor Cancer",
+      "Survivor Care",
     ],
   },
 ];
@@ -92,10 +92,10 @@ const OurProfessionals = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white/5 to-transparent">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center flex flex-col items-center mb-16">
+        <div className="text-center flex flex-col items-center mb-12 p-2">
           <h3 className={cn("text-4xl md:text-5xl font-medium mb-4")}>
             Meet Our{" "}
-            <Highlighter action="underline" color="fff" strokeWidth={2}>
+            <Highlighter action="underline" color="#fff" strokeWidth={2}>
               <strong className="text-[#a365ff] font-medium">Trusted</strong>
             </Highlighter>{" "}
             Professionals
@@ -113,6 +113,7 @@ const OurProfessionals = () => {
             <ProfileCard key={index} doctor={doctor} />
           ))}
         </div>
+        
 
         {/* <div className="text-center mt-16">
           <Button
@@ -167,12 +168,12 @@ const ProfileCard = ({ doctor }) => {
         </div>
 
         <div className="grid grid-cols-3 gap-4">
-          <Button className="col-span-1 h-12">More</Button>
+          <Button className="col-span-1 h-12">View</Button>
           <Button
-            onClick={() => navigate(`${nameToSlug(doctor.name)}#home`)}
+            onClick={() => navigate(`doctor/${nameToSlug(doctor.name)}#home`)}
             className="col-span-2 w-full h-12 py-3 px-6 bg-gradient-to-r from-[#a365ff] to-[#7630ba] text-white font-medium rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-[#a365ff]/30"
           >
-            Book Appointment
+            Book Now
           </Button>
         </div>
       </div>
@@ -181,3 +182,29 @@ const ProfileCard = ({ doctor }) => {
 };
 
 export default OurProfessionals;
+
+// Doctor
+// {
+//   _id,
+//   avatar,
+//   fullname,
+//   specializations: [],
+//   yearOfExperience,
+//   bio: heroDescription,
+//   about: aboutDescription,
+//   phoneNo,
+//   email,
+//   address,
+//   gender,
+// }
+
+// Patient
+// {
+//   _id,
+//   avatar,
+//   fullname,
+//   dob,
+//   phoneNo,
+//   email,
+//   gender,
+// }

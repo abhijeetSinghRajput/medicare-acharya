@@ -25,7 +25,7 @@ const Highlights = () => {
     <section id="highlights" className="">
       <div className="p-4 sm:p-8">
         <div className="text-center flex flex-col items-center mb-4">
-          <h3 className="text-4xl md:text-5xl max-w-3xl font-medium mb-4">
+          <h3 className="text-4xl md:text-5xl max-w-3xl font-medium mb-2 p-2">
             Celebrating Our{" "}
             <Highlighter action="underline" color="#fff" strokeWidth={2}>
               <strong className="font-medium text-[#a365ff]">

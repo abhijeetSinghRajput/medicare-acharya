@@ -5,65 +5,66 @@ import { cn } from "@/lib/utils";
 import React from "react";
 
 const testimonials = [
-{
+  {
     quote:
-    "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-    name: "Sarah Chen",
-    designation: "Product Manager at TechFlow",
+      "Booking appointments has become effortless for my patients, and I can manage my schedule more efficiently than ever before.",
+    name: "Dr. Sarah Chen",
+    designation: "Cardiologist",
     src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-},
-{
+  },
+  {
     quote:
-    "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    name: "Michael Rodriguez",
-    designation: "CTO at InnovateSphere",
+      "The platform has drastically reduced waiting times at our hospital. Patients appreciate the transparency and easy booking process.",
+    name: "Dr. Michael Rodriguez",
+    designation: "Orthopedic Surgeon",
     src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-},
-{
+  },
+  {
     quote:
-    "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+      "As a patient, I love how simple it is to find the right specialist and get confirmed appointments without any hassle.",
     name: "Emily Watson",
-    designation: "Operations Director at CloudScale",
+    designation: "Patient",
     src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-},
-{
+  },
+  {
     quote:
-    "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-    name: "James Kim",
-    designation: "Engineering Lead at DataPro",
+      "Managing multiple consultations is now stress-free. The reminders and patient updates are incredibly helpful for my practice.",
+    name: "Dr. James Kim",
+    designation: "Neurologist",
     src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-},
-{
+  },
+  {
     quote:
-    "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+      "I no longer worry about long queues. Booking online saves me time and gives me peace of mind knowing my slot is secured.",
     name: "Lisa Thompson",
-    designation: "VP of Technology at FutureNet",
+    designation: "Patient",
     src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-},
+  },
 ];
-
 
 const Testimonials = () => {
   return (
     <div>
       <div className="text-center flex flex-col gap-2 max-w-lg mx-auto relative z-10">
         <h3 className={cn("font text-4xl font-medium")}>
-          What Our{" "}
+          What{" "}
           <Highlighter action="underline" color="#fff" strokeWidth={2}>
-            <strong className="text-[#a365ff] font-medium">{"Clients"}</strong>
+            <strong className="text-[#a365ff] font-medium">
+              Doctors & Patients
+            </strong>
           </Highlighter>{" "}
           Say
         </h3>
         <ShinyText
-            className="text-base"
+          className="text-base"
           text={
-            "With hundreds of websites completed, we bring a proven track record of developing websites and delivering exceptional solutions for clients across industries."
+            "From hospital managers to practicing doctors, our partners share how smarter technology is transforming care delivery and operations."
           }
           speed={3}
         />
       </div>
 
-      <AnimatedTestimonials testimonials={testimonials}/>
+      <AnimatedTestimonials testimonials={testimonials} />
     </div>
   );
 };

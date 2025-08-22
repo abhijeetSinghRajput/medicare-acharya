@@ -27,7 +27,7 @@ const OurStory = () => {
   return (
     <div className="space-y-6">
       <div className="text-center flex flex-col gap-2 max-w-lg mx-auto relative z-10">
-        <h3 className={cn("font text-4xl font-medium")}>
+        <h3 className={cn("font text-4xl font-medium p-2")}>
           The{" "}
           <Highlighter action="underline" color="#fff" strokeWidth={2}>
             <strong className="text-[#a365ff] font-medium">{"Journey"}</strong>
@@ -37,7 +37,7 @@ const OurStory = () => {
         <ShinyText
           className="text-base"
           text={
-            "Every great idea begins with a story. From engineering roots to leadership roles and creative passions, our journey is built on curiosity, resilience, and a vision to transform healthcare with smarter solutions."
+            "It started with one question: why do patients still spend hours waiting when doctors are ready inside? With strong hospital connections and first-hand experience in healthcare, we set out to solve this—by building a platform that reduces waiting times, ensures verified doctors, and makes patient care seamless across hospitals."
           }
           speed={3}
         />
