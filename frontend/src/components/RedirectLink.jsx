@@ -1,8 +1,4 @@
-import { motion } from "framer-motion";
-import { ExternalLink, ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
 export function RedirectLink({ text, link }) {
   return (

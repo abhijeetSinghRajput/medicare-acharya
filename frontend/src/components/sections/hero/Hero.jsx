@@ -71,7 +71,7 @@ const Hero = () => {
           <RedirectLink text={"Get Started"} link={"#contact"}/>
 
           <div className="space-y-2">
-            <h3 className="medium text-base">Our Patners</h3>
+            <h3 className="medium text-base">Our Partners</h3>
             <div className="flex flex-row items-center justify-center mb-10 w-full">
               <AnimatedTooltip items={people} />
             </div>

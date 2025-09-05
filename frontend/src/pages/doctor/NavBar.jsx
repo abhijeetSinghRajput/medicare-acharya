@@ -26,6 +26,7 @@ const NavBar = () => {
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody className={"min-h-14"}>
+            <NavbarLogo />
           <NavItems items={navItems} />
         </NavBody>
  

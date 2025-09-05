@@ -2,18 +2,16 @@ import { Highlighter } from "@/components/magicui/highlighter";
 import ShinyText from "@/components/ShinyText/ShinyText";
 import { Badge } from "@/components/ui/badge";
 import { CardCarousel } from "@/components/ui/card-carousel";
+import { doctors } from "@/constant/doctors";
 import { Sparkle } from "lucide-react";
 import React from "react";
 
 const DoctorTeam = () => {
-  const images = [
-    { src: "./doctor1.png", alt: "Doctor 1" },
-    { src: "./doctor2.png", alt: "Doctor 2" },
-    { src: "./doctor3.png", alt: "Doctor 3" },
-    // {src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F1.png&w=640&q=75"},
-    // {src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F2.png&w=640&q=75"},
-    // {src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F3.png&w=640&q=75"},
-  ];
+  const images = doctors.map((doctor, index) => ({
+      src: doctor.avatar,
+      alt: `Doctor ${index + 1}`
+    }));
+  console.log(images);
 
   return (
     <section id="team" className="">

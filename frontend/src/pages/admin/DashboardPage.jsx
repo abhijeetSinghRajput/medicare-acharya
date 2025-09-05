@@ -1,32 +1,73 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, Calendar, Clock, Stethoscope, 
-  TrendingUp, Bell, Search, MoreHorizontal,
-  ArrowUpRight, ArrowDownRight, Plus,
-  Filter, Download, ChevronDown
-} from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  Users,
+  Calendar,
+  Clock,
+  Stethoscope,
+  TrendingUp,
+  Bell,
+  Search,
+  MoreHorizontal,
+  ArrowUpRight,
+  ArrowDownRight,
+  Plus,
+  Filter,
+  Download,
+  ChevronDown,
+} from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import EmptyState from "@/components/emptyStates/EmptyState";
 
 const DashboardPage = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [appointmentRequests, setAppointmentRequests] = useState([
-    { id: 1, patient: 'Sarah Johnson', time: '10:30 AM', type: 'New Patient', status: 'pending' },
-    { id: 2, patient: 'Michael Chen', time: '2:15 PM', type: 'Follow-up', status: 'pending' },
-    { id: 3, patient: 'Emma Wilson', time: '4:45 PM', type: 'Consultation', status: 'pending' }
+    {
+      id: 1,
+      patient: "Sarah Johnson",
+      time: "10:30 AM",
+      type: "New Patient",
+      status: "pending",
+    },
+    {
+      id: 2,
+      patient: "Michael Chen",
+      time: "2:15 PM",
+      type: "Follow-up",
+      status: "pending",
+    },
+    {
+      id: 3,
+      patient: "Emma Wilson",
+      time: "4:45 PM",
+      type: "Consultation",
+      status: "pending",
+    },
   ]);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
-    
+
     return () => clearInterval(timer);
   }, []);
 
@@ -37,7 +78,7 @@ const DashboardPage = () => {
       change: "+12%",
       isPositive: true,
       icon: <Users className="h-4 w-4" />,
-      description: "Till now"
+      description: "Till now",
     },
     {
       title: "Today's Patients",
@@ -45,7 +86,7 @@ const DashboardPage = () => {
       change: "+4%",
       isPositive: true,
       icon: <Stethoscope className="h-4 w-4" />,
-      description: "From yesterday"
+      description: "From yesterday",
     },
     {
       title: "Today's Appointments",
@@ -53,7 +94,7 @@ const DashboardPage = () => {
       change: "-2%",
       isPositive: false,
       icon: <Calendar className="h-4 w-4" />,
-      description: "From yesterday"
+      description: "From yesterday",
     },
     {
       title: "Avg. Wait Time",
@@ -61,24 +102,48 @@ const DashboardPage = () => {
       change: "-3m",
       isPositive: true,
       icon: <Clock className="h-4 w-4" />,
-      description: "From last week"
-    }
+      description: "From last week",
+    },
   ];
 
   const upcomingAppointments = [
-    { id: 1, patient: 'Robert Davis', time: '9:00 AM', type: 'Follow-up', status: 'confirmed' },
-    { id: 2, patient: 'Jennifer Lopez', time: '10:30 AM', type: 'Consultation', status: 'confirmed' },
-    { id: 3, patient: 'Thomas Moore', time: '11:45 AM', type: 'New Patient', status: 'confirmed' },
-    { id: 4, patient: 'Lisa Parker', time: '1:30 PM', type: 'Routine Check', status: 'confirmed' }
+    {
+      id: 1,
+      patient: "Robert Davis",
+      time: "9:00 AM",
+      type: "Follow-up",
+      status: "confirmed",
+    },
+    {
+      id: 2,
+      patient: "Jennifer Lopez",
+      time: "10:30 AM",
+      type: "Consultation",
+      status: "confirmed",
+    },
+    {
+      id: 3,
+      patient: "Thomas Moore",
+      time: "11:45 AM",
+      type: "New Patient",
+      status: "confirmed",
+    },
+    {
+      id: 4,
+      patient: "Lisa Parker",
+      time: "1:30 PM",
+      type: "Routine Check",
+      status: "confirmed",
+    },
   ];
 
   const handleAcceptRequest = (id) => {
-    setAppointmentRequests(prev => prev.filter(req => req.id !== id));
+    setAppointmentRequests((prev) => prev.filter((req) => req.id !== id));
     // In a real app, you would update the backend here
   };
 
   const handleRejectRequest = (id) => {
-    setAppointmentRequests(prev => prev.filter(req => req.id !== id));
+    setAppointmentRequests((prev) => prev.filter((req) => req.id !== id));
     // In a real app, you would update the backend here
   };
 
@@ -95,7 +160,11 @@ const DashboardPage = () => {
             />
           </div>
           <div className="flex items-center gap-3">
-            <Button variant="outline" size="icon" className="overflow-hidden rounded-full">
+            <Button
+              variant="outline"
+              size="icon"
+              className="overflow-hidden rounded-full"
+            >
               <Bell className="h-4 w-4" />
             </Button>
             <Avatar className="h-9 w-9">
@@ -146,8 +215,18 @@ const DashboardPage = () => {
                       <CardContent>
                         <div className="text-2xl font-bold">{stat.value}</div>
                         <p className="text-xs text-muted-foreground flex items-center">
-                          <span className={`flex items-center mr-1 ${stat.isPositive ? 'text-green-600' : 'text-red-600'}`}>
-                            {stat.isPositive ? <ArrowUpRight className="h-3 w-3" /> : <ArrowDownRight className="h-3 w-3" />}
+                          <span
+                            className={`flex items-center mr-1 ${
+                              stat.isPositive
+                                ? "text-green-600"
+                                : "text-red-600"
+                            }`}
+                          >
+                            {stat.isPositive ? (
+                              <ArrowUpRight className="h-3 w-3" />
+                            ) : (
+                              <ArrowDownRight className="h-3 w-3" />
+                            )}
                             {stat.change}
                           </span>
                           {stat.description}
@@ -166,8 +245,12 @@ const DashboardPage = () => {
                   <CardContent className="pl-2">
                     <div className="flex items-center justify-center h-[200px]">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-primary">86%</div>
-                        <p className="text-muted-foreground">of appointments completed on time</p>
+                        <div className="text-3xl font-bold text-primary">
+                          86%
+                        </div>
+                        <p className="text-muted-foreground">
+                          of appointments completed on time
+                        </p>
                         <Progress value={86} className="w-full mt-4" />
                       </div>
                     </div>
@@ -189,19 +272,30 @@ const DashboardPage = () => {
                           <AvatarFallback>RD</AvatarFallback>
                         </Avatar>
                         <div className="ml-4 space-y-1">
-                          <p className="text-sm font-medium leading-none">{upcomingAppointments[0]?.patient}</p>
-                          <p className="text-sm text-muted-foreground">{upcomingAppointments[0]?.type}</p>
+                          <p className="text-sm font-medium leading-none">
+                            {upcomingAppointments[0]?.patient}
+                          </p>
+                          <p className="text-sm text-muted-foreground">
+                            {upcomingAppointments[0]?.type}
+                          </p>
                         </div>
                         <div className="ml-auto font-medium">
-                          <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                          <Badge
+                            variant="outline"
+                            className="bg-green-50 text-green-700 border-green-200"
+                          >
                             Confirmed
                           </Badge>
                         </div>
                       </div>
                       <div className="flex items-center pt-2">
                         <div className="space-y-1">
-                          <p className="text-sm text-muted-foreground">Appointment Time</p>
-                          <p className="text-sm font-medium">{upcomingAppointments[0]?.time}</p>
+                          <p className="text-sm text-muted-foreground">
+                            Appointment Time
+                          </p>
+                          <p className="text-sm font-medium">
+                            {upcomingAppointments[0]?.time}
+                          </p>
                         </div>
                         <Button size="sm" className="ml-auto">
                           View Details
@@ -226,7 +320,7 @@ const DashboardPage = () => {
                   <CardContent>
                     <div className="space-y-4">
                       {upcomingAppointments.map((appointment, index) => (
-                        <motion.div 
+                        <motion.div
                           key={appointment.id}
                           className="flex items-center"
                           initial={{ opacity: 0, y: 10 }}
@@ -234,14 +328,28 @@ const DashboardPage = () => {
                           transition={{ duration: 0.3, delay: index * 0.1 }}
                         >
                           <Avatar className="h-9 w-9">
-                            <AvatarImage src={`/avatars/0${index + 2}.png`} alt="Avatar" />
-                            <AvatarFallback>{appointment.patient.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                            <AvatarImage
+                              src={`/avatars/0${index + 2}.png`}
+                              alt="Avatar"
+                            />
+                            <AvatarFallback>
+                              {appointment.patient
+                                .split(" ")
+                                .map((n) => n[0])
+                                .join("")}
+                            </AvatarFallback>
                           </Avatar>
                           <div className="ml-4 space-y-1">
-                            <p className="text-sm font-medium leading-none">{appointment.patient}</p>
-                            <p className="text-sm text-muted-foreground">{appointment.type}</p>
+                            <p className="text-sm font-medium leading-none">
+                              {appointment.patient}
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                              {appointment.type}
+                            </p>
                           </div>
-                          <div className="ml-auto font-medium">{appointment.time}</div>
+                          <div className="ml-auto font-medium">
+                            {appointment.time}
+                          </div>
                           <Button variant="ghost" size="icon">
                             <MoreHorizontal className="h-4 w-4" />
                           </Button>
@@ -261,7 +369,7 @@ const DashboardPage = () => {
                   <CardContent>
                     <div className="space-y-4">
                       {appointmentRequests.map((request, index) => (
-                        <motion.div 
+                        <motion.div
                           key={request.id}
                           className="flex items-center"
                           initial={{ opacity: 0, y: 10 }}
@@ -269,23 +377,35 @@ const DashboardPage = () => {
                           transition={{ duration: 0.3, delay: index * 0.1 }}
                         >
                           <Avatar className="h-9 w-9">
-                            <AvatarImage src={`/avatars/0${index + 5}.png`} alt="Avatar" />
-                            <AvatarFallback>{request.patient.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                            <AvatarImage
+                              src={`/avatars/0${index + 5}.png`}
+                              alt="Avatar"
+                            />
+                            <AvatarFallback>
+                              {request.patient
+                                .split(" ")
+                                .map((n) => n[0])
+                                .join("")}
+                            </AvatarFallback>
                           </Avatar>
                           <div className="ml-4 space-y-1">
-                            <p className="text-sm font-medium leading-none">{request.patient}</p>
-                            <p className="text-sm text-muted-foreground">{request.type}</p>
+                            <p className="text-sm font-medium leading-none">
+                              {request.patient}
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                              {request.type}
+                            </p>
                           </div>
                           <div className="ml-auto space-x-2">
-                            <Button 
-                              size="sm" 
-                              variant="destructive" 
+                            <Button
+                              size="sm"
+                              variant="destructive"
                               onClick={() => handleRejectRequest(request.id)}
                             >
                               Reject
                             </Button>
-                            <Button 
-                              size="sm" 
+                            <Button
+                              size="sm"
                               className="h-8 px-2"
                               onClick={() => handleAcceptRequest(request.id)}
                             >
@@ -298,6 +418,16 @@ const DashboardPage = () => {
                   </CardContent>
                 </Card>
               </div>
+            </TabsContent>
+
+            <TabsContent value="appointments">
+              <EmptyState/>
+            </TabsContent>
+            <TabsContent value="patients">
+              <EmptyState/>
+            </TabsContent>
+            <TabsContent value="reports">
+              <EmptyState/>
             </TabsContent>
           </Tabs>
         </main>

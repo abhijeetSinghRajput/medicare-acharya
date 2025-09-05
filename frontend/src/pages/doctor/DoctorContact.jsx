@@ -23,19 +23,15 @@ const socialIcons = {
   instagram: <Instagram size={20} />,
 };
 
-const doctor = {
-  name: "Dr. Rajender Kumar",
-  avatar: "./doctors/rajender-2.jpg",
-  socialLinks: [
-    { label: "twitter", link: "" },
-    { label: "github", link: "" },
-    { label: "linkedin", link: "" },
-    { label: "email", link: "" },
-    { label: "instagram", link: "" },
-  ],
-};
+const socialLinks = [
+  { label: "twitter", link: "" },
+  { label: "github", link: "" },
+  { label: "linkedin", link: "" },
+  { label: "email", link: "" },
+  { label: "instagram", link: "" },
+];
 
-const DoctorContact = () => {
+const DoctorContact = ({doctor}) => {
   return (
     <section id="contact" className="p-4 sm:p-8 max-w-7xl mx-auto">
       <div className="text-center flex flex-col items-center mb-16">
@@ -106,11 +102,11 @@ const DoctorContact = () => {
             </Badge>
             <div className="flex items-center gap-6">
               <Avatar className="size-20 outline outline-offset-4 outline-[#a365ff]">
-                <AvatarImage src={doctor.avatar} />
+                <AvatarImage src={doctor?.avatar} />
                 <Fallback>DR</Fallback>
               </Avatar>
               <div>
-                <h4 className="text-2xl font-semibold">{doctor.name}</h4>
+                <h4 className="text-2xl font-semibold">{doctor?.name}</h4>
                 <p className="text-gray-600 dark:text-gray-400">
                   Internal Medicine Specialist
                 </p>
@@ -124,7 +120,7 @@ const DoctorContact = () => {
             </p>
           </CardContent>
           <CardFooter className="p-6 pt-0 flex gap-6">
-            {doctor.socialLinks.map((link, index) => (
+            {socialLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.link}

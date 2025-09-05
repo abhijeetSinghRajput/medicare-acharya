@@ -6,87 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { useNavigate } from "react-router-dom";
+import { doctors } from "@/constant/doctors";
 
-const doctors = [
-  {
-    name: "Dr. Rajender Kumar",
-    avatar: "https://res.cloudinary.com/dhtxrpqna/image/upload/1000096945-removebg-preview_pqnqvq.png",
-    about:
-      "Renowned Radiation Oncologist with over 25 years of experience treating prostate, breast, lung, and brain cancers. Known for pioneering advanced therapies across North Delhi.",
-    specialization: "Radiation Oncology",
-    experience: "25+ years",
-    tags: [
-      "Orthopedics",
-      "Join Replacement",
-    ],
-  },
-  {
-    name: "Dr Jitesh Manghwani",
-    avatar: "https://res.cloudinary.com/dhtxrpqna/image/upload/1000096908-removebg-preview_ekqngw.png",
-    about:
-      "Orthopaedic Spine Surgeon at Max Hospital, Shalimar Bagh. Featured on Health 360 with Sneha Mordani.",
-    specialization: "Orthopaedic Spine Surgery",
-    experience: "10 years",
-    tags: [
-      "Spine Surgery Expert",
-      "Orthopaedic Care",
-      "Robotic surgery",
-    ],
-  },
-  {
-    name: "Dr. Arjun Patel",
-    avatar: "/doctor2.png",
-    about: "Orthopedic surgeon specializing in minimally invasive techniques",
-    specialization: "Orthopedics",
-    experience: "12 years",
-    tags: [
-      "Minimally Invasive",
-      "Sports Injury Expert",
-      "Arthroscopy Specialist",
-      "Bone Health",
-      "FractureCare",
-      "Joint Pain Relief",
-      "Spine Specialist",
-      "Orthopedic Surgeon",
-    ],
-  },
-  {
-    name: "Dr. Clara Whitmore",
-    avatar: "/doctor3.png",
-    about: "Neurologist researching advanced treatments for Parkinson's",
-    specialization: "Neurology",
-    experience: "8 years",
-    tags: [
-      "Parkinsons Expert",
-      "BrainHealth",
-      "Neurology Care",
-      "Migraine Specialist",
-      "Stroke Prevention",
-      "EpilepsyCare",
-      "Neuro Research",
-      "Memory Disorders",
-      "Nerve Health",
-    ],
-  },
-  {
-    name: "Dr. Sanjay Mehta",
-    avatar: "/doctor4.png",
-    about: "Oncologist with expertise in precision cancer therapies",
-    specialization: "Oncology",
-    experience: "14 years",
-    tags: [
-      "CancerCare",
-      "Precision Oncology",
-      "Chemotherapy Expert",
-      "Tumor Specialist",
-      "Cancer Research",
-      "Immunotherapy",
-      "Radiation Therapy",
-      "HopeFor Cancer",
-      "Survivor Care",
-    ],
-  },
-];
 
 const OurProfessionals = () => {
   return (
@@ -170,7 +91,7 @@ const ProfileCard = ({ doctor }) => {
         <div className="grid grid-cols-3 gap-4">
           <Button className="col-span-1 h-12">View</Button>
           <Button
-            onClick={() => navigate(`doctor/${nameToSlug(doctor.name)}#home`)}
+            onClick={() => navigate(`doctor/${nameToSlug(doctor.name)}`)}
             className="col-span-2 w-full h-12 py-3 px-6 bg-gradient-to-r from-[#a365ff] to-[#7630ba] text-white font-medium rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-[#a365ff]/30"
           >
             Book Now
