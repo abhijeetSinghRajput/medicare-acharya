@@ -2,6 +2,16 @@
 
 Full-stack app with React (Vite + Tailwind) frontend and Express + MongoDB backend.
 
+## Setup
+
+Install dependencies:
+
+```bash
+npm run setup
+cd ./frontend
+npm run dev
+```
+
 ## Structure
 
 ```
@@ -30,15 +40,6 @@ medicare-acharya/
 
 - Node.js 18+
 - MongoDB (local or cloud)
-
-## Setup
-
-Install dependencies:
-
-```bash
-cd backend && npm install
-cd ../frontend && npm install
-```
 
 Create `backend/.env`:
 
